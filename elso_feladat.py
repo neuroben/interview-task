@@ -16,6 +16,8 @@ key_in_code = []
 encrypted_message_code = []
 encrypted_message = []
 
+# converting the text to thier index in the abc
+
 def txt_to_code(txt):
     code = []
     for letter in txt:
@@ -31,12 +33,15 @@ while len(line_in_code) > len(key_in_code):
     print("The key can not be shorter than the message.")
     key_in_code = txt_to_code(input("Please give a key which length is equal to the message: "))
 
+# encrypting with the key
+
 for i,v in enumerate(line_in_code):
     if v + key_in_code[i] < 26:
         encrypted_message_code.append(v + key_in_code[i])
     else:
         encrypted_message_code.append((v + key_in_code[i]) % 27)
 
+# convert the numbers to letters
 
 def code_to_txt(code):
     txt = []
