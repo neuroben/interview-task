@@ -25,10 +25,7 @@ key_code = txt_to_code(key_in)
 decrypted_message_code = []
 
 for i,v in enumerate(enrcypted_message_code):
-    if v - key_code[i] > 0:
-        decrypted_message_code.append(v - key_code[i])
-    else:
-        decrypted_message_code.append((v - key_code[i]))
+    decrypted_message_code.append(v - key_code[i])
         
 # converting code to txt
 
