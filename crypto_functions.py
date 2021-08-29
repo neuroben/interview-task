@@ -38,16 +38,10 @@ def encrypt(message,key):
             encrypted_message_code.append(v + key_in_code[i])
         else:
             encrypted_message_code.append((v + key_in_code[i]) % 27)
-            
+
     return ''.join(code_to_txt(encrypted_message_code))
 
 def decrypt(enrcypted_message,key):
-
-    def txt_to_code(txt):
-        code = []
-        for letter in txt:
-            code.append(abc.index(letter))
-        return code
 
     enrcypted_message_code = txt_to_code(enrcypted_message)
     key_code = txt_to_code(key_length(enrcypted_message,key))
