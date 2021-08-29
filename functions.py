@@ -1,5 +1,6 @@
+abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
+
 def encrypt(message,key):
-    abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
 
     # converting the text to thier index in the abc
 
@@ -39,8 +40,7 @@ def encrypt(message,key):
     return ''.join(code_to_txt(encrypted_message_code))
 
 def decrypt(enrcypted_message,key):
-    abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
-    
+
     # converting the text to thier index in the abc
 
     def txt_to_code(txt):
