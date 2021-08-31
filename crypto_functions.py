@@ -16,7 +16,7 @@ def code_to_txt(code):
         txt.append(abc[number])
     return txt
 
-# chenking key length
+# checking key length
 
 def key_length(msg,key):
     while len(msg) > len(key):
