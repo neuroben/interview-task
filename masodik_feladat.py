@@ -2,8 +2,10 @@ from crypto_functions import *
 
 raw_words = open("words.txt")
 words = []
-for i,v in enumerate(raw_words):
-    words.append(v.strip())
+words_code = []
+for line in raw_words:
+    words.append(line.strip())
+    words_code.append(txt_to_code(line.strip()))
 
 m1 = "uyvxiqzvwqsbvdrihuqpdorc"
 m2 = "uyrelwk vzsxfrvwpj otbzb"
@@ -11,10 +13,41 @@ m2 = "uyrelwk vzsxfrvwpj otbzb"
 m1_code = txt_to_code(m1)
 m2_code = txt_to_code(m2)
 
-words_code = []
-for word in words:
-    words_code.append(txt_to_code(word))
 
+# egyezes = 0
+# egyezesek = []
+# for i,v in enumerate(words):
+#     if len(v) <= len(decrypt("rywnf","kulcs")):
+#         for j,letter in enumerate(v):
+#             if letter == decrypt("rywnf", "kulcs")[j]:
+#                 print(v, decrypt("rywnf", "kulcs"))
+#                 egyezes += 1
+#                 print(letter)
+#                 print(decrypt("rywnf", "kulcs")[j])
+#                 egyezesek.append(v)
+#             else:
+#                 egyezes = 0
+#         egyezes = 0
+#
+# print(egyezesek)
+#
+# print(decrypt("rywnf", "kulcs"))
+# ans = []
+#
+# for word in words_code:
+#     for i,v in enumerate(word):
+#         ans.append(decrypt(m2[:len(word)],code_to_txt(m1_code[i] - v)))
+#
+#
+#
+# for j,w in enumerate(words_code):
+#     print(w)
+#     if len(w) > 1:
+#         for i,letter in enumerate(w):
+#             print(decrypt(code_to_txt(m1_code[i]),m1_code-letter))
+#     else:
+#         print(i)
+#         print(decrypt(code_to_txt(m1_code[i]),m1_code-w))
 # words_length = []
 # words_length.append(0)
 # for word in words:
